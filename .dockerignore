@@ -1,0 +1,7 @@
+fly.toml
+Dockerfile
+.dockerignore
+node_modules
+.git
+.env
+flyctl secrets set MONGODB_URI=mongodb+srv://<username>:<password>@<username>.7aq8wtz.mongodb.net/<DBname>?retryWrites=true&w=majority
