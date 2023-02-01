@@ -6,6 +6,10 @@
   "scripts": {
     "start": "node index.js",
     "dev": "nodemon index.js",
+    "build:ui": "rmdir /s /q build && cd ../muistio_frontend/ && npm run build && xcopy /E \"build\" \"../muistio_backend/build\" /s /i",
+    "deploy": "flyctl deploy --app silent-smoke-3456",
+    "deploy:full": "npm run build:ui && npm run deploy",
+    "logs:prod": "fylctl logs",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "",
